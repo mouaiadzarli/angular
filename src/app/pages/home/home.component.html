@@ -1,11 +1,10 @@
 <div style="display: flex; justify-content: space-evenly">
   <div>
-    <app-product-details></app-product-details>
+    <app-product-details [product]="product"></app-product-details>
   </div>
   <div>
-    <div *ngFor="let course of courses">
-      <app-product></app-product>
+    <div *ngFor="let product of products">
+      <app-product [product]="product" (action)="getData($event)"></app-product>
     </div>
   </div>
-
 </div>

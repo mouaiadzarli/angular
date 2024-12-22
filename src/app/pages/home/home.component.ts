@@ -6,13 +6,18 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductComponent, ProductDetailsComponent,CommonModule],
+  imports: [ProductComponent, ProductDetailsComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  courses = [
-    { id: 1, name: "Angular For Beginners" },
-    { id: 2, name: "Angular Core Deep Dive" },
-    { id: 3, name: "Angular Forms In Depth" },
-  ];}
+  product:any
+  products = [
+    { id: 1, name: 'Angular For Beginners', details: '1111' },
+    { id: 2, name: 'Angular Core Deep Dive', details: '2222' },
+    { id: 3, name: 'Angular Forms In Depth', details: '3333' },
+  ];
+  getData(product: any) {
+   this.product=product
+  }
+}
